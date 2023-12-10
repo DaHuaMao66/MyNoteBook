@@ -17,3 +17,4 @@
 | one or few components uzit |        many components uzit         |
 |  defined inside component  | shared for all component in the app |
 
+this is a test
