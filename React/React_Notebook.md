@@ -17,63 +17,21 @@
 | one or few components uzit |        many components uzit         |
 |  defined inside component  | shared for all component in the app |
 
-#### Inverse Data Flow
+#### Inverse Data Flow 🤔
 
 In react,the data flow direction is always **_one-way_**⬇  
 which means the data will not be passed from children  
 **components** to parent **components**.
+The "Lifting Up State" can solove that scene.  
+**_Move the state to parent component and pass the [state,setState]  
+as props._**
 
-```javascript
-export default function App() {
-  const [items, setItems] = useState([]);
+#### State Derived 🤔
 
-  function handleAddItems(item) {
-    setItems((items) => [...items, item]);
-    console.log(items);
-  }
+Sometime we don't have to create State variable  
+just simplily derive state from exsit state.
 
-  return (
-    <div className="app">
-      <Form onAddItems={handleAddItems} />
-    </div>
-  );
-}
-
-function Form({ onAddItems }) {
-  const [description, setDescription] = useState("");
-  const [quantity, setQuantity] = useState(1);
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    if (!description) return;
-    const newItem = { description, quantity, packed: false, id: Date.now() };
-    console.log(newItem, "NewItem OBJ has been created!!");
-
-    onAddItems(newItem);
-
-    setDescription("");
-    setQuantity(1);
-  }
-
-  return (
-    <form className="add-form" onSubmit={handleSubmit}>
-      <h3>What do you need fot your trip 😋?</h3>
-      <select value={quantity} onChange={(e) => setQuantity(+e.target.value)}>
-        {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
-          <option value={num} key={num}>
-            {num}
-          </option>
-        ))}
-      </select>
-      <input
-        type="text"
-        placeholder="Item..."
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      ></input>
-      <button>ADD</button>
-    </form>
-  );
-}
-```
+**_Example_**✅: we derive num state & totalPrice state  
+from cart state
+![Alt text](image-1.png)  
+**Every single we update state cause the component re-render.💔**
