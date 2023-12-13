@@ -78,3 +78,40 @@ over again which is noisying.😫
 #### How to fix Props Drilling 😀
 
 The Answer is **_Children Props_**
+
+![Alt text](image-6.png)
+
+# How actually things work intenally inside React✅
+
+#### Components && Instances && Elements
+
+![Alt text](image-9.png)
+![Alt text](image-8.png)
+![Alt text](image-10.png)
+![Alt text](image-11.png)
+
+##### Summary 😋
+
+Actually,React does not directly manipulate  
+**_DOM_**,but it will create some **_elements_** by  
+calling React Functions. And this kind of elements are bascially comprise with some  
+instances of **_ReactComponent_** which is function  
+we defined in component related file,those  
+components will return **_JSX_** when we use it.
+
+### Tip: Component != JSX but invole it
+
+Components encapsulate the behavior and  
+structure of UI.They can be function or classes that return **_JSX_**,defining how the **_UI_** looks like based on the component's logic and props.
+
+## ------------------------------------
+
+### Componrnt(Instances) Lifecycle🤔
+
+Before we learn about the hook **_useEffect_**  
+section **which** we should konw something  
+about lifecycle of a component.
+
+![Alt text](image-7.png)
+
+### Effects And Data Fetching ✅
