@@ -151,3 +151,21 @@ about lifecycle of a component.
 ![Alt text](image-24.png)
 
 ### Effects And Data Fetching ✅
+
+Fetch Data is **_not allow_** in Render logic.
+Instead,we should use **_UseEffect_** Function  
+to fetch data.
+
+#### UseEffect() ✅
+
+Tip >> 1
+UseEffect will not be Executed while  
+we call component functions,but it  
+will be excuted after component rendering.
+Tip >> 2
+We also pass an empty array to UseEffect
+which means that effect is executed **_only
+a time as the component first mounted_**.
+
+![Alt text](image-25.png)
+![Alt text](image-26.png)
