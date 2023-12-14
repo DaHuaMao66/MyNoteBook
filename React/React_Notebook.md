@@ -114,4 +114,40 @@ about lifecycle of a component.
 
 ![Alt text](image-7.png)
 
+### How Rendering Work🤔
+
+#### OverView
+
+![Alt text](image-12.png)
+![Alt text](image-13.png)
+![Alt text](image-14.png)
+
+### Rendering Phase ✅
+
+![Alt text](image-17.png)
+
+##### The Mechanics Of State In React
+
+![Alt text](image-16.png)
+
+##### Virtual Dom
+
+![Alt text](image-15.png)
+
+##### Recociliation By Recociler:Fiber
+
+![Alt text](image-18.png)
+![Alt text](image-19.png)
+![Alt text](image-20.png)
+![Alt text](image-21.png)
+
+### Commit Phase ✅
+
+![Alt text](image-22.png)
+![Alt text](image-23.png)
+
+### Summary Process Of Rendering
+
+![Alt text](image-24.png)
+
 ### Effects And Data Fetching ✅
